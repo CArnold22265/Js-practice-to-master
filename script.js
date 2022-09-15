@@ -82,7 +82,7 @@ prepMore(1, 4);
 */
 
 ////////////FUNCTIONS DECLARATIONS VS EXPRESSIONS ///////////////
-
+/*
 //DECLARATION////
 function calcAge1(birthYear) {
     const age = 2022 - birthYear;
@@ -102,3 +102,73 @@ const calcAge2 = function (birthyear) {
 }
 const age2 = calcAge2(1991);
 console.log(age2);
+
+////ARROW FUNCTION(ES6)//// when you have one line of code and 1 paramater
+const calcAge3 = birthYear => 2022 - birthYear;
+const age3 = calcAge3(1986)
+console.log(age3);
+
+//arrow function with multiple paramaters and lines of code////
+const yearsUntilRetirement = (birthyear, firstName) => {
+    const age = 2022 - birthyear;
+    const retirement = 60 - age;
+    //return retirement;
+    return `${firstName} retires in ${retirement} years`;
+
+}
+console.log(yearsUntilRetirement(1988, 'Dragon'));
+console.log(yearsUntilRetirement(1994, 'Amber'));
+*/
+
+//////////FUNCTIONS CALLING OTHER FUNCTIONS/////////
+/*
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+
+function fruitProcessor(apples, oranges) {
+
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `juice with ${applePieces} pieces of apple and ${orangePieces} pieces of oranges.`;
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+function cutLettuce(vegetable) {
+    return vegetable * .8
+}
+
+function LettuceWithNoEnd(LettuceInitial) {
+    const lettuceHeadIlb = LettuceInitial * 1.2;
+    const lettuceYield = cutLettuce(lettuceHeadIlb);
+    const LettuceFinalYield = `lettuce initally came in ${LettuceInitial} heads, 
+    weighed out to ${lettuceHeadIlb}Ilbs, and then cut down to a final yield weight of${lettuceYield}`;
+    return LettuceFinalYield;5
+}
+
+console.log(LettuceWithNoEnd(16));
+*/
+///Function called inside of if else
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 60 - age;
+
+    if (retirement < 0) {
+        return -1;
+    } else {
+        return retirement;
+    }
+}
+
+console.log(yearsUntilRetirement(1988, 'Chris'));
+console.log(yearsUntilRetirement(1913, 'abraham'));
