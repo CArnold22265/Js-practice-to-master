@@ -41,7 +41,7 @@ const fennelPuree = blend(2, 0, 0, 4);
 console.log(fennelPuree);
 */
 //More practice functions with switch state ments if else statements/////
-
+/*
 const soupPar = 2;
 const makeMoreSoup = 4;
 if (soupPar < 4) {
@@ -79,5 +79,26 @@ function prepMore(quarts, day,) {
 
 }
 prepMore(1, 4);
+*/
 
+////////////FUNCTIONS DECLARATIONS VS EXPRESSIONS ///////////////
 
+//DECLARATION////
+function calcAge1(birthYear) {
+    const age = 2022 - birthYear;
+    return age;
+} //same as underneath
+
+function calcAge1(birthYear) {
+    return 2022 - birthYear;
+}
+
+const age1 = calcAge1(1988);
+console.log(age1);
+
+////FUNCTION STATEMENT////
+const calcAge2 = function (birthyear) {
+    return 2022 - birthyear;
+}
+const age2 = calcAge2(1991);
+console.log(age2);
