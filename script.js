@@ -153,6 +153,7 @@ function LettuceWithNoEnd(LettuceInitial) {
 console.log(LettuceWithNoEnd(16));
 */
 ///Function called inside of if else
+/*
 const calcAge = function (birthYear) {
     return 2037 - birthYear;
 }
@@ -172,3 +173,117 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1988, 'Chris'));
 console.log(yearsUntilRetirement(1913, 'abraham'));
+*/
+
+
+//////////////////CODING CHALLENGE 1///////////////////////////////
+
+
+
+/*
+Back to the two gymnastics teams, the Dolphins and the Koalas! 
+There is a new gymnastics discipline, which works differently.
+
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+A team ONLY wins if it has at least DOUBLE the average score of the other team. Otherwise, no team wins!
+1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+
+2. Use the function to calculate the average for both teams
+
+3. Create a function 'checkWinner' that takes the average score of each 
+team as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console,
+ together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)".
+
+4. Use the 'checkWinner' function to determine the winner for both DATA 1 and DATA 2.
+
+5. Ignore draws this time.
+
+TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+
+TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+HINT: To calculate average of 3 values, add them all together and divide by 3
+HINT: To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
+GOOD LUCK 😀
+*/
+
+////1////
+
+const calcAverageScore = (score1, score2, score3) => {
+    return (score1 + score2 + score3) / 3;
+}
+
+///2///
+// const dolphinsScoreAvrg = calcAverageScore(44, 23, 71);
+// const koalasScoreAvrg = calcAverageScore(65, 54, 49);
+
+// console.log(dolphinsScoreAvrg, koalasScoreAvrg);
+////3 & 4////
+
+// function checkwinner(avrgScoreDolphins, avrgScoreKoalas) {
+
+//     if (calcAverageScore(dolphinsScores) * 2 > calcAverageScore(koalasScores)) {
+//         return `"dolphins win (${calcAverageScore(dolphinsScores)} vs ${calcAverageScore(koalasScores)}"`;
+//     } else if (calcAverageScore(koalasScores) * 2 > calcAverageScore(dolphinsScores)) {
+//         return `"Koalas win (${calcAverageScore(koalasScores)} vs ${calcAverageScore(dolphinsScores)})"`;
+//     } else {
+//         return "neither team wins";
+//     }
+// }
+
+//first attempt average scores = NaN fuck! not DRY second attempt:
+
+const dolphinsScoreAvrg1 = calcAverageScore(44, 23, 71);
+const koalasScoreAvrg1 = calcAverageScore(65, 54, 49);
+const dolphinsScoreAvrg2 = calcAverageScore(85, 54, 41);
+const koalasScoreAvrg2 = calcAverageScore(23, 34, 27);
+
+function checkwinner(avrgScoreDolphins, avrgScoreKoalas) {
+
+    if (avrgScoreDolphins / 2 > avrgScoreKoalas) {
+        return console.log(`dolphins win "${avrgScoreDolphins} vs ${avrgScoreKoalas}"`);
+    } else if (avrgScoreKoalas / 2 > avrgScoreDolphins) {
+        return console.log(`"Koalas win ${avrgScoreKoalas} vs ${avrgScoreDolphins}"`);
+    } else {
+        return console.log("neither team wins");
+    }
+}
+
+checkwinner(dolphinsScoreAvrg1, koalasScoreAvrg1);
+checkwinner(dolphinsScoreAvrg2, koalasScoreAvrg2);
+//FIGURED IT OU1 BOI!!!//
+
+////5////
+function checkWinnerNoDraw(avrgScoreDolphins, avrgScoreKoalas) {
+
+    if (avrgScoreDolphins > avrgScoreKoalas) {
+        return console.log(`dolphins win "${avrgScoreDolphins} vs ${avrgScoreKoalas}"`);
+    } else if (avrgScoreKoalas > avrgScoreDolphins) {
+        return console.log(`"Koalas win ${avrgScoreKoalas} vs ${avrgScoreDolphins}"`);
+    } else {
+        return console.log(-1);
+    }
+}
+checkWinnerNoDraw(dolphinsScoreAvrg1, koalasScoreAvrg1);
+checkWinnerNoDraw(dolphinsScoreAvrg2, koalasScoreAvrg2);
+
+
+
+
+// const yearsUntilRetirement = (birthyear, firstName) => {
+//     const age = 2022 - birthyear;
+//     const retirement = 60 - age;
+//     //return retirement;
+
+
+
+
+
+
+
+
+
+
+
+
+
