@@ -301,7 +301,7 @@ checkWinnerNoDraw(dolphinsScoreAvrg2, koalasScoreAvrg2);
 // console.log(chris);
 
 //Excercise
-
+/*
 const calcAge = function (birthYear) {
     return 2022 - birthYear
 }
@@ -332,10 +332,37 @@ const profile3 = profileData(name3, age3);
 console.log(profile1);
 console.log(profile2);
 console.log(profile3);
+*/
 
+//////ARRAY METHODS////
+const friends = ['Grant', 'Murph', 'Yann'];
+//puch method adds an element to the end of an array//
+const newLength = friends.push(`Brennan`);
+//brennan was added to the end of the array
+console.log(friends);
+console.log(newLength);
 
+//unshift method adds an element to the beginning of an array
+friends.unshift('Daniel');
+console.log(friends);
+//added daniel to the beginning of the array
 
+//remove an element from an array
+friends.pop(); //removes last element returns the item removed from the list
+console.log(friends);
 
+//remove first element
+friends.shift();
+console.log(friends);
 
+//find out the position of an element in an array
+console.log(friends.indexOf('Murph'));
 
+//es6 methd that returns true if the element is in the array and false if it isnt
+console.log(friends.includes('Murph'));
+console.log(friends.includes('Brennan'));
+//includes is commonly used in statements
 
+if (friends.includes(`Murph`)) {
+    console.log('You have a friend named Muurph')
+}
