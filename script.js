@@ -209,9 +209,8 @@ GOOD LUCK 😀
 
 ////1////
 
-const calcAverageScore = (score1, score2, score3) => {
-    return (score1 + score2 + score3) / 3;
-}
+const calcAverageScore = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
 
 ///2///
 // const dolphinsScoreAvrg = calcAverageScore(44, 23, 71);
@@ -232,7 +231,7 @@ const calcAverageScore = (score1, score2, score3) => {
 // }
 
 //first attempt average scores = NaN fuck! not DRY second attempt:
-
+/*
 const dolphinsScoreAvrg1 = calcAverageScore(44, 23, 71);
 const koalasScoreAvrg1 = calcAverageScore(65, 54, 49);
 const dolphinsScoreAvrg2 = calcAverageScore(85, 54, 41);
@@ -267,19 +266,72 @@ function checkWinnerNoDraw(avrgScoreDolphins, avrgScoreKoalas) {
 checkWinnerNoDraw(dolphinsScoreAvrg1, koalasScoreAvrg1);
 checkWinnerNoDraw(dolphinsScoreAvrg2, koalasScoreAvrg2);
 
-
-
-
+//I could have used let instead of const for score avg variables then i could have re declared them instead of creating two sets of variables..
 // const yearsUntilRetirement = (birthyear, firstName) => {
 //     const age = 2022 - birthyear;
 //     const retirement = 60 - age;
 //     //return retirement;
+*/
 
+////INTRODUCTION TO ARRAYS////
+//common array (literal syntax)
+// const myNickNames = ['Tofer', 'Charnold', 'Dragon'];
+// console.log(myNickNames);
 
+// const luckyNumbers = [1234, 555, 1034];
+// console.log(luckyNumbers);
 
+// //another way//
+// const years = new Array(1991, 1988, 2043, 2021);
 
+// //console log an element of an array//
+// console.log(myNickNames[0]);
+// console.log(myNickNames[2]);
+// //getting the actual number of elements that are in the array
+// console.log(myNickNames.length);
+// //get the last element of an array 
+// console.log(myNickNames[myNickNames.length - 1]);
 
+// // change an array
+// myNickNames[1] = 'That one guy';
+// console.log(myNickNames[1], myNickNames);
 
+// const firstName = 'Christopher';
+// const chris = [firstName, 'Arnold', 2022 - 1988, 'future full-stack dev', myNickNames];
+// console.log(chris);
+
+//Excercise
+
+const calcAge = function (birthYear) {
+    return 2022 - birthYear
+}
+
+const yearsUntilRetirement = function (age) {
+    return console.log(60 - age);
+}
+
+const yearBorn = [1988, 2013, 2015, 1964];
+const age1 = calcAge(yearBorn[0]);
+const age2 = calcAge(yearBorn[1]);
+const age3 = calcAge(yearBorn[2]);
+const age4 = calcAge(yearBorn[yearsUntilRetirement.length - 1]);
+
+const name1 = "Chris";
+const name2 = "david";
+const name3 = "John";
+const name4 = "Gary";
+
+const profileData = function (name, age) {
+    const retirementYears = 60 - age;
+    return [name, age, retirementYears];
+}
+const profile1 = profileData(name1, age1);
+const profile2 = profileData(name2, age2);
+const profile3 = profileData(name3, age3);
+
+console.log(profile1);
+console.log(profile2);
+console.log(profile3);
 
 
 
