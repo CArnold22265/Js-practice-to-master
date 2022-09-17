@@ -408,7 +408,7 @@ console.log(total);
 
 // pretty easy but i forgot how to use .last for last item in array...
 */
-
+/*
 ////Object SAmple code////
 const chris = {
     firstName: 'Chris',
@@ -439,19 +439,61 @@ if (chris[interestedIn]) {
     console.log(chris[interestedIn])
 ];
 */
-////using dot and bracket to add new properties to the object
-chris.location = 'STL';
-chris.height = "5'9'' ";
-chris.weight = "165 ilbs";
-chris['TikTok'] = "I'm not a mindless bOt, read a fucking book!";
-console.log(chris);
+// ////using dot and bracket to add new properties to the object
+// chris.location = 'STL';
+// chris.height = "5'9'' ";
+// chris.weight = "165 ilbs";
+// chris['TikTok'] = "I'm not a mindless bOt, read a fucking book!";
+// console.log(chris);
 
-//challenge
-//"Chris has 3 friends, and his best friend is called Murph"
+// //challenge
+// //"Chris has 3 friends, and his best friend is called Murph"
 
-//console.log(chris['firstName'] + 'has 3 friends and his best friends name is' + ' ' + chris.friends[0]);
-//close but not quite
-console.log(`${chris.firstName} has ${chris.friends.length} friends and his best friend is called ${chris.friends[0]}`);
-//sick string
-//practice 1 more string
-console.log(`${chris.firstName} ${chris.lastName} weighs ${chris.weight} and his height is ${chris.height}`);
+// //console.log(chris['firstName'] + 'has 3 friends and his best friends name is' + ' ' + chris.friends[0]);
+// //close but not quite
+// console.log(`${chris.firstName} has ${chris.friends.length} friends and his best friend is called ${chris.friends[0]}`);
+// //sick string
+// //practice 1 more string
+// console.log(`${chris.firstName} ${chris.lastName} weighs ${chris.weight} and his height is ${chris.height}`);
+
+////OBJECT METHODS
+//ADD a FUNCTION TO AN OBJECT
+const chris = {
+    firstName: 'Chris',
+    lastName: 'Arnold',
+    birthYear: 1988,
+    job: 'Cook',
+    friends: ['Murph', 'Grant', 'Tom'],
+    hasDriversLicense: true,
+
+    // calcAge: function () {
+    //     return 2022 - this.birthYear;  //"this" refers to entire object 
+    // }
+
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        if (chris.hasDriversLicense) {
+            return `${this.firstName} is a ${this.calcAge} year old ${this.job}, and he has a license`
+        } else {
+            return `${this.firstName} is a ${this.age} year old ${this.job}, and he has no license`
+
+        }
+    }
+};
+
+console.log(chris.getSummary());
+
+// CHALLENGE 
+//"Chris is a 34 year old cook, and he has a drivers license"
+// if (chris.hasDriversLicense) {
+//     console.log(`${chris.firstName} is a ${chris.age} year old cook, and he has a license`)
+// } else {
+//     console.log(`${chris.firstName} is a ${chris.age} year old cook, and he has no license`)
+// }; 
+
+//I wrote this if else as a summarry above in object
+//got it first try 😊
