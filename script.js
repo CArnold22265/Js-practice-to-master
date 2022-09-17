@@ -380,7 +380,7 @@ Steven is still building his tip calculator, using the same rules as before: Tip
 TEST DATA: 125, 555 and 44
 HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
 GOOD LUCK 😀
-*/
+
 
 ////1////
 const calcTip = function (bill) {
@@ -407,3 +407,51 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(total);
 
 // pretty easy but i forgot how to use .last for last item in array...
+*/
+
+////Object SAmple code////
+const chris = {
+    firstName: 'Chris',
+    lastName: 'Arnold',
+    age: 2022 - 1988,
+    job: 'Cook',
+    friends: ['Murph', 'Grant', 'Tom']
+
+};
+console.log(chris);
+
+////Retrieving data from an object dot vs bracket notation
+//1st way getting property
+console.log(chris.lastName);
+//2nd way with brackets
+console.log(chris['lastName']);
+
+const nameKey = 'Name';
+console.log(chris['first' + nameKey]);
+console.log(chris['last' + nameKey]); //can write any expression within brackets, but not with dot
+/*
+let interestedIn = prompt('What do you want to know about Chris? choose firstName, lastName, age, job, or friends'); console.log(chris[interestedIn]); //fucking sick bro
+
+if (chris[interestedIn]) {
+    console.log(chris[interestedIn])
+} else[
+    interestedIn = prompt(' wrong request dumbass! What do you want to know about Chris? choose firstName, lastName, age, job, or friends'),
+    console.log(chris[interestedIn])
+];
+*/
+////using dot and bracket to add new properties to the object
+chris.location = 'STL';
+chris.height = "5'9'' ";
+chris.weight = "165 ilbs";
+chris['TikTok'] = "I'm not a mindless bOt, read a fucking book!";
+console.log(chris);
+
+//challenge
+//"Chris has 3 friends, and his best friend is called Murph"
+
+//console.log(chris['firstName'] + 'has 3 friends and his best friends name is' + ' ' + chris.friends[0]);
+//close but not quite
+console.log(`${chris.firstName} has ${chris.friends.length} friends and his best friend is called ${chris.friends[0]}`);
+//sick string
+//practice 1 more string
+console.log(`${chris.firstName} ${chris.lastName} weighs ${chris.weight} and his height is ${chris.height}`);
