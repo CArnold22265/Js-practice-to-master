@@ -209,7 +209,7 @@ GOOD LUCK 😀
 
 ////1////
 
-const calcAverageScore = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+//const calcAverageScore = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
 
 ///2///
@@ -458,6 +458,7 @@ if (chris[interestedIn]) {
 
 ////OBJECT METHODS
 //ADD a FUNCTION TO AN OBJECT
+/*
 const chris = {
     firstName: 'Chris',
     lastName: 'Arnold',
@@ -486,7 +487,7 @@ const chris = {
 };
 
 console.log(chris.getSummary());
-
+*/
 // CHALLENGE 
 //"Chris is a 34 year old cook, and he has a drivers license"
 // if (chris.hasDriversLicense) {
@@ -497,3 +498,58 @@ console.log(chris.getSummary());
 
 //I wrote this if else as a summarry above in object
 //got it first try 😊
+
+
+/*
+const resume = {
+    firstName: 'Christopher',
+    lastName: 'Arnold',
+    startedCooking: 2011,
+    birthYear: 1988
+
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    }
+};
+
+console.log(resume.age);
+*/
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    birthYeah: 1988,
+    calcAge: function () {
+        this.age = 2037 - this.birthYeah;
+        return this.age;
+    },
+
+};
+console.log(jonas.calcAge()); //you have to log the calcAge first or it will come back undefined!!!
+console.log(jonas.age);
+
+const resume = {
+    firstName: 'Christopher',
+    lastName: 'Arnold',
+    occupation: 'Cheek Clapper',
+    skills: ['mouth game', 'finger game', 'choking'],
+    birthYear: 1988,
+    beganEmployment: 2011,
+
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+    calcSummary: function () {
+        this.summary = `${resume.firstName} ${resume.lastName} is a certified ${resume.occupation}! His best skill is ${resume.skills[0] + ' and ' + resume.skills[1]} `;
+        return this.summary;
+    }
+}
+console.log(resume.calcAge());
+resume.calcSummary();
+console.log(resume.summary);
+console.log(resume.age);
