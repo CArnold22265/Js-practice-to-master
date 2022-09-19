@@ -32,7 +32,7 @@ if (hasDriversLicense) console.log('I can drive');
 //practicing functions
 /*
 function blend(shallots, garlicCloves, potatoes, fennel) {
-    const puree = `puree with ${shallots} shallots, ${garlicCloves} cloves of garlic, ${potatoes} yukon potatoes, and 
+    const puree = `puree with ${shallots} shallots, ${garlicCloves} cloves of garlic, ${potatoes} yukon potatoes, and
     ${fennel} cups of julienned fennel.`;
     return puree;
 }
@@ -145,7 +145,7 @@ function cutLettuce(vegetable) {
 function LettuceWithNoEnd(LettuceInitial) {
     const lettuceHeadIlb = LettuceInitial * 1.2;
     const lettuceYield = cutLettuce(lettuceHeadIlb);
-    const LettuceFinalYield = `lettuce initally came in ${LettuceInitial} heads, 
+    const LettuceFinalYield = `lettuce initally came in ${LettuceInitial} heads,
     weighed out to ${lettuceHeadIlb}Ilbs, and then cut down to a final yield weight of${lettuceYield}`;
     return LettuceFinalYield;5
 }
@@ -181,7 +181,7 @@ console.log(yearsUntilRetirement(1913, 'abraham'));
 
 
 /*
-Back to the two gymnastics teams, the Dolphins and the Koalas! 
+Back to the two gymnastics teams, the Dolphins and the Koalas!
 There is a new gymnastics discipline, which works differently.
 
 Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
@@ -190,7 +190,7 @@ A team ONLY wins if it has at least DOUBLE the average score of the other team. 
 
 2. Use the function to calculate the average for both teams
 
-3. Create a function 'checkWinner' that takes the average score of each 
+3. Create a function 'checkWinner' that takes the average score of each
 team as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console,
  together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)".
 
@@ -468,7 +468,7 @@ const chris = {
     hasDriversLicense: true,
 
     // calcAge: function () {
-    //     return 2022 - this.birthYear;  //"this" refers to entire object 
+    //     return 2022 - this.birthYear;  //"this" refers to entire object
     // }
 
     calcAge: function () {
@@ -562,7 +562,7 @@ Let's go back to Mark and John comparing their BMIs! This time, let's use object
 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
 TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 GOOD LUCK 😀
-*/
+
 
 ////1////
 const profileMark = {
@@ -595,4 +595,75 @@ profileJohn.calcBMI();
 profileJohn.bmi > profileMark.bmi ?
     console.log(`${profileJohn.fullName}'s BMI(${profileJohn.bmi}) is higher than ${profileMark.fullName}'s (${profileMark.bmi})`) :
     console.log(`${profileMark.fullName}'s BMI(${profileMark.bmi}) is higher than ${profileJohn.fullName}'s (${profileJohn.bmi})`);
+
+*/
+
+////Implementing a for loop////
+//for loop keeps running as long as condition is true ++increases a number by 1
+
+// console.log('Lifting weights is repitition 1 🏋🏻');
+// console.log('Lifting weights is repitition 2 🏋🏻');
+// console.log('Lifting weights is repitition 3 🏋🏻');
+// console.log('Lifting weights is repitition 4 🏋🏻');
+// console.log('Lifting weights is repitition 5 🏋🏻');
+// console.log('Lifting weights is repitition 6 🏋🏻');
+// console.log('Lifting weights is repitition 7 🏋🏻');
+// console.log('Lifting weights is repitition 8 🏋🏻');
+// console.log('Lifting weights is repitition 9 🏋🏻');
+// console.log('Lifting weights is repitition 10 🏋🏻');
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log('Lifting weights is repitition 1 🏋🏻');  //printed the string 10 times
+// }
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights is repetition ${rep}🏋🏻`);
+// }
+
+const types = [];
+
+
+////LOOPING ARRAYS, BREAKING AND CONTINUING
+
+
+const jonasArray = [
+    'jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+//individually logging each element of the array to the console
+for (let i = 0; i < jonasArray.length; i++) {
+    //reading from array
+    console.log(jonasArray[i], typeof jonasArray[i]);
+    // filling types of array
+    //types[i] = typeof jonasArray[i];
+    types.push(typeof jonasArray[i]);
+}
+//create new array which contains the type of each element in jonasArray array st line 623
+//console.log(types);
+
+//another example
+//calculate ages of the four array birth years and store in a new array
+const years = [1991, 2007, 1969, 2020];
+const age = [];
+for (let i = 0; i < years.length; i++) {
+    age.push(2022 - years[i]);
+}
+//console.log(age);
+
+//continue and break
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+//as soon as a number is found we want to break the loop
+
+
+
+
+
+
 
