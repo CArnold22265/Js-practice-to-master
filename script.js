@@ -620,11 +620,59 @@ profileJohn.bmi > profileMark.bmi ?
 //     console.log(`Lifting weights is repetition ${rep}🏋🏻`);
 // }
 
-const types = [];
+// const types = [];
 
 
-////LOOPING ARRAYS, BREAKING AND CONTINUING
+// ////LOOPING ARRAYS, BREAKING AND CONTINUING
 
+
+// const jonasArray = [
+//     'jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ];
+
+// //individually logging each element of the array to the console
+// for (let i = 0; i < jonasArray.length; i++) {
+//     //reading from array
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+//     // filling types of array
+//     //types[i] = typeof jonasArray[i];
+//     types.push(typeof jonasArray[i]);
+// }
+//create new array which contains the type of each element in jonasArray array st line 623
+//console.log(types);
+
+//another example
+//calculate ages of the four array birth years and store in a new array
+/*
+const years = [1991, 2007, 1969, 2020];
+const age = [];
+for (let i = 0; i < years.length; i++) {
+    age.push(2022 - years[i]);
+}
+//console.log(age);
+
+//continue and break
+
+console.log('---ONLY STRINGS---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+//as soon as a number is found we want to break the loop
+
+console.log('---BREAK WITH NUMBER---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] === 'number') break;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+*/
+
+
+/////////LOOP OVER AN ARRAY BACKWARDS CREATE A LOOP IN A LOOP////////////
 
 const jonasArray = [
     'jonas',
@@ -634,36 +682,20 @@ const jonasArray = [
     ['Michael', 'Peter', 'Steven']
 ];
 
-//individually logging each element of the array to the console
-for (let i = 0; i < jonasArray.length; i++) {
-    //reading from array
-    console.log(jonasArray[i], typeof jonasArray[i]);
-    // filling types of array
-    //types[i] = typeof jonasArray[i];
-    types.push(typeof jonasArray[i]);
+const backArray = [];
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(i, jonasArray[i])
+
 }
-//create new array which contains the type of each element in jonasArray array st line 623
-//console.log(types);
 
-//another example
-//calculate ages of the four array birth years and store in a new array
-const years = [1991, 2007, 1969, 2020];
-const age = [];
-for (let i = 0; i < years.length; i++) {
-    age.push(2022 - years[i]);
+//loop inside of  a loop 
+// we have 3 different excercises we want to do 5 times each
+
+for (let excercise = 1; excercise < 4; excercise++) {
+    console.log(`-----starting excercise ${excercise}');
+    `)
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Excercise ${excercise}: lifting weights repetition ${rep} 🏋🏻`);
+    }
 }
-//console.log(age);
-
-//continue and break
-for (let i = 0; i < jonasArray.length; i++) {
-    if (typeof jonasArray[i] !== 'string') continue;
-    console.log(jonasArray[i], typeof jonasArray[i]);
-}
-//as soon as a number is found we want to break the loop
-
-
-
-
-
-
-
