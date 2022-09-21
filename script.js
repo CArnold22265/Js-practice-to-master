@@ -673,7 +673,7 @@ for (let i = 0; i < jonasArray.length; i++) {
 
 
 /////////LOOP OVER AN ARRAY BACKWARDS CREATE A LOOP IN A LOOP////////////
-
+/*
 const jonasArray = [
     'jonas',
     'Schmedtmann',
@@ -699,3 +699,149 @@ for (let excercise = 1; excercise < 4; excercise++) {
         console.log(`Excercise ${excercise}: lifting weights repetition ${rep} 🏋🏻`);
     }
 }
+*/
+
+//////////////////////////////////////THE WHILE LOOP////////////////////////////////////
+/*
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights is repitition ${rep} 🏋🏻`);  //printed the string 10 times
+}
+
+let rep = 1;
+while (rep <= 10) {           //while loops dont depend on a counter
+    console.log(` WHILE: Lifting weights is repitition ${rep} 🏋🏻`);
+    rep++;
+}
+
+//roll a dice randomly until we hit 6 then it stops
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+} 
+*/
+
+//practice notes//
+/* 
+--------------------FUNCTIONS-----------------------------
+//--------------DEclaraion -can be used before it is declared.
+const calcage = function (birthyear) {
+    return 2037 - birthyear;
+}
+
+//------------------Expression-------------
+Essentially a function value stored in a variable 
+
+const calcAge = function (birthyear) {
+    return 2037 - birthyear;
+};
+
+//------------------Arrow------------------
+Great for quick one line functions. cant use .this
+const calcAge = birthYear => 2037 - birthYear;
+
+
+//-----------------call function-------------
+
+//-------------------FOR LOOP-----------------
+
+for (let rep = 1; rep <= 10; rep++) {
+    //     console.log('Lifting weights is repitition 1 🏋🏻');  //printed the string 10 times
+    // }
+    
+
+//-------------------PUSH ITEM TO ARRAY-------------
+friends.push(`Brennan`)
+
+
+//--------------------if else vs ternary-----------------
+//---------IF else
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * .15;
+    } else {
+        return bill * .20;
+    }
+} 
+//-----------ternary
+
+function
+
+
+
+*/
+///////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Let's improve Steven's tip calculator even more, this time using loops!
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+HINT: Call calcTip in the loop and use the push method to add values to the tips and totals arrays 😉
+4. BONUS: Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it:
+  4.1. First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together
+  4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
+  4.3. Call the function with the 'totals' array
+GOOD LUCK 😀
+*/
+
+////  1   &    2  ////
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+
+
+////3////
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * .15;
+    } else {
+        return bill * .20;
+    }
+}
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(calcTip(bills[i]) + bills[i]);
+
+}
+
+console.log(tips, totals);
+
+//4. BONUS: Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it:
+
+
+
+const calcAverage = function (arr) {
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = arr[i] + sum;              // = sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage([2 + 3 + 7]));
+console.log(calcAverage(tips));
+console.log(calcAverage(totals)1);
+
+
+
+
+
+
+// const calcAverage = function (arr) [
+//     let = 0;
+// ]
+
+//variable = Expression1 ? Expression2 : Expression3
+//const newLength = friends.push(`Brennan`);
+//for (let rep = 1; rep <= 10; rep++) {
+    //     console.log('Lifting weights is repitition 1 🏋🏻');  //printed the string 10 times
+    // }
+//for (let i = 0; i <= bills.length; i++ ); {
+//   tips.push =  calcTip(bills[i]) 
+//}
