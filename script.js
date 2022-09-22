@@ -1,5 +1,5 @@
 ////Strict Mode///
-'use strict';
+"use strict";
 
 /*let hasDriversLicense = false;
 const passTest = true;
@@ -175,10 +175,7 @@ console.log(yearsUntilRetirement(1988, 'Chris'));
 console.log(yearsUntilRetirement(1913, 'abraham'));
 */
 
-
 //////////////////CODING CHALLENGE 1///////////////////////////////
-
-
 
 /*
 Back to the two gymnastics teams, the Dolphins and the Koalas!
@@ -210,7 +207,6 @@ GOOD LUCK 😀
 ////1////
 
 //const calcAverageScore = (score1, score2, score3) => (score1 + score2 + score3) / 3;
-
 
 ///2///
 // const dolphinsScoreAvrg = calcAverageScore(44, 23, 71);
@@ -289,7 +285,7 @@ checkWinnerNoDraw(dolphinsScoreAvrg2, koalasScoreAvrg2);
 // console.log(myNickNames[2]);
 // //getting the actual number of elements that are in the array
 // console.log(myNickNames.length);
-// //get the last element of an array 
+// //get the last element of an array
 // console.log(myNickNames[myNickNames.length - 1]);
 
 // // change an array
@@ -368,8 +364,6 @@ if (friends.includes(`Murph`)) {
     console.log('You have a friend named Muurph')
 }
 */
-
-
 
 /*
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
@@ -488,17 +482,16 @@ const chris = {
 
 console.log(chris.getSummary());
 */
-// CHALLENGE 
+// CHALLENGE
 //"Chris is a 34 year old cook, and he has a drivers license"
 // if (chris.hasDriversLicense) {
 //     console.log(`${chris.firstName} is a ${chris.age} year old cook, and he has a license`)
 // } else {
 //     console.log(`${chris.firstName} is a ${chris.age} year old cook, and he has no license`)
-// }; 
+// };
 
 //I wrote this if else as a summarry above in object
 //got it first try 😊
-
 
 /*
 const resume = {
@@ -622,9 +615,7 @@ profileJohn.bmi > profileMark.bmi ?
 
 // const types = [];
 
-
 // ////LOOPING ARRAYS, BREAKING AND CONTINUING
-
 
 // const jonasArray = [
 //     'jonas',
@@ -670,7 +661,6 @@ for (let i = 0; i < jonasArray.length; i++) {
     console.log(jonasArray[i], typeof jonasArray[i]);
 }
 */
-
 
 /////////LOOP OVER AN ARRAY BACKWARDS CREATE A LOOP IN A LOOP////////////
 /*
@@ -786,7 +776,7 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
   4.3. Call the function with the 'totals' array
 GOOD LUCK 😀
 */
-
+/*
 ////  1   &    2  ////
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
@@ -845,3 +835,34 @@ console.log(calcAverage(totals));
 //for (let i = 0; i <= bills.length; i++ ); {
 //   tips.push =  calcTip(bills[i]) 
 //}
+
+*/
+//////////////END SECTION 2, BEGIN PRACTICE SECTION/////////////////////
+/////////////////////PRACTICE EXERCISE 1//////////////////////
+//Create a function that calculates your age in days when given an object with the name and birthyear inside of it//
+//should log name, birthyear, age, days old to the console in a string////
+//1. convert birth year to years old  2022 - birthyear
+//2. log age as a variable
+//3. convert age to days - age * 365
+//4. Log name as variable
+//4. store template literal ex John was born in 2001. John is 21 years old. John is x days old
+
+const chris = {
+  name: "Christopher",
+  birthyear: 1988,
+};
+
+const amber = {
+  name: "Amber",
+  birthyear: 1994,
+};
+
+const calcDays = function (object) {
+  object.age = 2022 - object.birthyear;
+  object.DaysOld = object.birthyear * 365 + " " + "days" + " " + "old";
+  const solutionLiteral = `${object.name} was born in ${object.birthyear}. ${object.name} is ${object.age} years old, which is roughly ${object.DaysOld}!`;
+  return solutionLiteral;
+};
+
+console.log(calcDays(amber));
+/////Worked first try!!!
