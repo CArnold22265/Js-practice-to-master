@@ -846,7 +846,7 @@ console.log(calcAverage(totals));
 //3. convert age to days - age * 365
 //4. Log name as variable
 //4. store template literal ex John was born in 2001. John is 21 years old. John is x days old
-
+/*
 const chris = {
   name: "Christopher",
   birthyear: 1988,
@@ -866,3 +866,49 @@ const calcDays = function (object) {
 
 console.log(calcDays(amber));
 /////Worked first try!!!
+/////New practice calculate exact age old when given birthday.
+//Create object containing birth month
+
+In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+
+chickens = 2 legs
+cows = 4 legs
+pigs = 4 legs
+
+
+//test data
+// animals(2, 3, 5) ➞ 36
+
+// animals(1, 2, 3) ➞ 22
+
+// animals(5, 2, 8) ➞ 50
+
+1. log the data set as an array
+2. create a function Calclegs that stores multiplies the first arrayi by 2, the second by 4, and third by four and stores answers into new array named legs
+3. store sum of arrays as a var legs
+4. return legs
+*/
+/*
+const arrayLegs = [];
+// let sum = 0;
+
+const animalsData1 = [2, 3, 5];
+const animalsData2 = [1, 2, 3];
+const animalsData3 = [5, 2, 8];
+
+const calcLegs = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    return (sum = arr[0] * 2 + arr[1] * 4 + arr[2] * 4);
+  }
+
+  //arrayLegs.push(array[0] * 2);
+  //arrayLegs.push(array[1] * 2);
+  //arrayLegs.push(array[2] * 2);
+};
+//console.log(calcLegs(animalsData1)); //STUDY
+console.log(.sum(animalsData1));
+*/
+
+
+                         ///STUDY///////
+///////////////////////////SECTION 7//////////////////////////////////
