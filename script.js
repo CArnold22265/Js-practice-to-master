@@ -909,6 +909,69 @@ const calcLegs = function (arr) {
 console.log(.sum(animalsData1));
 */
 
-
-                         ///STUDY///////
+///STUDY///////
 ///////////////////////////SECTION 7//////////////////////////////////
+/*
+//selects the text within a css class of message//
+console.log(document.querySelector('.message').textContent);
+//selects winning phase changed message from Start guessing to correct number
+document.querySelector('.message').textContent = '🎉 Correct Number!';
+
+document.querySelector('.number').textContent = 13;
+document.querySelector('.score').textContent = 123;
+//selects the value of the input field, inputs expect a value
+document.querySelector('.guess').value = 23;
+console.log((document.querySelector('.guess').value = 23));
+*/
+///////STUDY EVENT LISTENER///////
+//left to right selects the button once clicked a function logs the value inputed into the box with a class of guess...
+//the query selector waits on the eventlitener to detect a xclick befor it calls the function.
+// document.querySelector(".check").addEventListener("click", function () {
+//   console.log(document.querySelector(".guess").value);
+// });
+///////STUDY EVENT LISTENER///////
+//left to right selects the button once clicked a function logs the value inputed into the box with a class of guess...
+//the query selector waits on the eventlitener to detect a xclick befor it calls the function.
+//document.querySelector('.check').addEventListener('click', function () {
+
+// //define the secret number
+// const secretNumber = Math.trunc(Math.random() * 20) + 1;
+// let score = 20;
+
+// document.querySelector('.check').addEventListener('click', function () {
+//   const guess = Number(document.querySelector('.guess').value);
+//   console.log(guess, typeof guess);
+//   //when no number input
+//   if (!guess) {
+//     document.querySelector('.message').textContent = 'no number';
+
+//     //when player wins
+//   } else if (guess === secretNumber) {
+//     document.querySelector('.message').textContent = 'you win';
+//     document.querySelector('body').style.backgroundColor = '#60B347';
+//     document.querySelector('.number').style.width = '30rem';
+//     document.querySelector('.number').textContent = secretNumber;
+
+//     //when guess is high
+//   } else if (guess > secretNumber) {
+//     if (score < 0) {
+//       document.querySelector('.message').textContent = 'too high';
+//       score--;
+//       document.querySelector('.score').textContent = score;
+//     } else {
+//       document.querySelector('.message').textContent = 'you suck again';
+//       document.querySelector('.score').textContent = 0;
+//     }
+
+//     //when guess is low
+//   } else if (guess < secretNumber) {
+//     if (score > 0) {
+//       document.querySelector('.message').textContent = 'too low';
+//       score--;
+//       document.querySelector('.score').textContent = score;
+//     } else {
+//       document.querySelector('.message').textContent = 'you suck again';
+//       document.querySelector('.score').textContent = 0;
+//     }
+//   }
+// });
